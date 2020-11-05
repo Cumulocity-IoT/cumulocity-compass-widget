@@ -1,0 +1,25 @@
+<ng-form #configForm="ngForm">
+    <c8y-form-group>
+        <label for="CompassConfig">
+            Compass Configuration
+        </label>
+    </c8y-form-group>
+
+    <c8y-form-group>
+        <label for="measurement-fragment">
+            Measurement fragment
+        </label>
+        <input type="text" name="measurement-fragment" id="measurement-fragment"
+            class="form-control bar-chart-control" (change)="onMeasurementStructureChanged($event)"
+            [(ngModel)]="measurementStructure.fragment" placeholder='Fragment' />
+    </c8y-form-group>
+
+    <c8y-form-group>
+        <label for="measurement-series">
+            Measurement series
+        </label>
+        <input type="text" name="measurement-series" id="measurement-series" class="form-control bar-chart-control"
+            (change)="onMeasurementStructureChanged($event)" [(ngModel)]="measurementStructure.series"
+            placeholder='Series' />
+    </c8y-form-group>
+</ng-form>

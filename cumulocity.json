@@ -1,0 +1,13 @@
+{
+  "name": "Compass",
+  "contextPath": "compass-widget",
+  "key": "compass-widget-application-key",
+  "contentSecurityPolicy": "default-src 'self'",
+  "description": "Displays an animated compass direction based on the measurement data provided",
+  "icon": {
+    "class": "fa fw fa-compass"
+  },
+  "manifest": {
+    "noAppSwitcher": true
+  }
+}
