@@ -10,33 +10,27 @@
 
 ### Runtime Widget Deployment?
 
-* This widget supports runtime deployment. Download the [Runtime Binary](https://github.com/SoftwareAG/cumulocity-compass-widget/releases/download/1.0.0/compass-widget.zip).
+* This widget supports runtime deployment. Download the [Runtime Binary](https://github.com/SoftwareAG/cumulocity-compass-widget/releases/download/1.0.0/compass-widget.zip) and follow runtime deployment instructions from [here](https://github.com/SoftwareAG/cumulocity-runtime-widget-loader).
 
 
-## Deploying the widget
-To deploy the widget to your Cumulocity tenant
+## Quickstart
+This guide will teach you how to add the widget in your existing or new dashboard.
 
-1. Download the latest version of this widget
-2. Log into your Cumulocity tenant
-3. If you do not have application builder installed, please follow the steps shown [here](https://github.com/SoftwareAG/cumulocity-app-builder)
-4. If you have not yet created your application using the application Builder, please click on 'Application builder' and then click on 'Add application'
-6. In your application, click on the 'More...' link on the right side of the screen
-7. Click on 'Install widget'
-8. Click on 'Choose File' and select the "compass-widget.zip" which you have downloaded
-9.   Click on the 'Upload' button to add the widget to you tenant
+NOTE: This guide assumes that you have followed the [installation](https://github.com/SoftwareAG/cumulocity-runtime-widget-loader) instructions
 
-## Adding the widget to your dashboard
-1. To add the widget to your dashboard, click on your application and select the 'Add Widget' link at the top of the screen
-2. Scroll down and select the 'Compass' widget
-3. See the next section for widget configuration details
- 
+1. Open the Application Builder application from the app switcher (Next to your username in the top right)
+2. Add a new dashboard or navigate to an existing dashboard
+3. Click `Add Widget`
+4. Search for `Compass`
+5. See below for the configuration options
 
-## Configuring the Widget through your Cumulocity tenant
-1. In the 'Compass' widget:
-    3a. Enter the "Measurement Fragment"
-    3b. Enter the "Measurement Series"
+### Configuration options
 
-The compass widget will refresh each time a new value is sent to the configured measurement for the device.
+1. Select your device in the `Target Assets or Devices` field
+2. Select the device measurement and fragment in the `Measurement` dropdown
+3. Click `Save`
+
+The compass widget will refresh each time a new measurement value is sent for the device.
 
 ### Development - to enhance and test this widget in your local environment
 1. Clone the repository on your local machine using `git clone https://github.com/SoftwareAG/cumulocity-compass-widget.git`.
