@@ -1,4 +1,4 @@
-﻿# Cumulocity IoT Compass widget[<img width="35" src="https://user-images.githubusercontent.com/67993842/97668428-f360cc80-1aa7-11eb-8801-da578bda4334.png"/>](https://github.com/SoftwareAG/cumulocity-compass-widget/releases/download/1.0.0/compass-widget.zip)
+﻿# Cumulocity IoT Compass widget[<img width="35" src="https://user-images.githubusercontent.com/67993842/97668428-f360cc80-1aa7-11eb-8801-da578bda4334.png"/>](https://github.com/SoftwareAG/cumulocity-compass-widget/releases/download/1.0.1/compass-widget_v1.0.1.zip)
 
 ![Compasswidget](compass-widget.png)
 
@@ -10,7 +10,7 @@
 
 ### Runtime Widget Deployment?
 
-* This widget supports runtime deployment. Download the [Runtime Binary](https://github.com/SoftwareAG/cumulocity-compass-widget/releases/download/1.0.0/compass-widget.zip) and follow runtime deployment instructions from [here](https://github.com/SoftwareAG/cumulocity-runtime-widget-loader).
+* This widget supports runtime deployment. Download the [Runtime Binary](https://github.com/SoftwareAG/cumulocity-compass-widget/releases/download/1.0.1/compass-widget_v1.0.1.zip) and follow runtime deployment instructions from [here](https://github.com/SoftwareAG/cumulocity-runtime-widget-loader).
 
 
 ## Quickstart
@@ -30,8 +30,40 @@ NOTE: This guide assumes that you have followed the [installation](https://githu
 2. Select the device measurement and fragment in the `Measurement` dropdown
 3. Click `Save`
 
-The compass widget will refresh each time a new measurement value is sent for the device.
+The compass widget will refresh each time a new measurement value is sent from the device.
 
+### Sending data to the Compass widget
+The compass widget will listen for the measurement and fragment which you have specified in the configuration options above
+
+The compass arrow will move to the numeric measurement value which must be between 0 and 360 to represent the arrow rotation in degrees.
+
+In the 'body' of your Cumulocity measurement, you will need to include the following: 
+	
+	    {  
+	      measurementseries: The measurement series which has been selected in the compass widget e.g. "weather_station" 
+          {
+             measureementfragment: The measurement fragment which has been selected in the compass widget e.g. "wind_direction"  
+	         {
+	           value: numeric value from 0 to 360 to represent the rotation of the compass arrow e.g. 270
+	           unit: the unit label  e.g. "degrees"
+             }
+	         .
+	         .
+	    }
+
+   e.g. 
+
+	    {
+	        weather_station: { 
+	          wind_direction: {
+	            value: 270,
+	            unit: "degrees"
+	          }
+	        }  
+	        .
+	        .
+	    }
+	    
 ### Development - to enhance and test this widget in your local environment
 1. Clone the repository on your local machine using `git clone https://github.com/SoftwareAG/cumulocity-compass-widget.git`.
 2. Run `npm install` to download the module dependencies.
