@@ -20,6 +20,7 @@ import * as _ from 'lodash';
 import { ControlContainer, NgForm } from "@angular/forms";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { ICompassConfig } from "./i-compass-config";
+import { FetchClient } from "@c8y/client";
 
 @Component({
     selector: 'compass-widget-config-component',
@@ -36,8 +37,7 @@ export class CompassWidgetConfig implements OnInit {
     oldDeviceId: string = '';
     public supportedSeries: string[];
 
-    constructor(
-        private http: HttpClient ) {
+    constructor(private fetchClient: FetchClient) {
         this.allLoaded = true;
     }
 
@@ -53,19 +53,13 @@ export class CompassWidgetConfig implements OnInit {
             console.log("Cannot get Measurement fragment and series because the device id is blank.");
         } else {
             if (this.oldDeviceId !== this.config.device.id) {
-                const base64Auth: string = sessionStorage.getItem('_tcy8');
-                let headersObject = new HttpHeaders();
-                if (base64Auth === undefined || base64Auth.length === 0) {
-                    console.log("Authorization details not found in session storage.");
-                } else {
-                    headersObject = headersObject.append('Authorization', 'Basic '+base64Auth);
-                }
-                const httpOptions = {headers: headersObject};
-                const supportedSeriesResp: any = await this.http.get('/inventory/managedObjects/'+ this.config.device.id +'/supportedSeries', {...httpOptions}).toPromise();
-
-                if (supportedSeriesResp !== undefined) {
-                    this.supportedSeries = supportedSeriesResp.c8y_SupportedSeries;
-                }
+                this.fetchClient.fetch('/inventory/managedObjects/'+ this.config.device.id +'/supportedSeries').then((resp) => {
+                    resp.json().then((jsonResp) => {
+                        if(jsonResp !== undefined) {
+                            this.supportedSeries = jsonResp.c8y_SupportedSeries;
+                        }
+                    });
+                });
                 this.oldDeviceId = this.config.device.id;
             }
         }
