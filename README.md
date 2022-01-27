@@ -10,7 +10,7 @@
 
 ### Runtime Widget Deployment?
 
-* This widget supports runtime deployment. Download the [Runtime Binary](https://github.com/SoftwareAG/cumulocity-compass-widget/releases/download/1.0.1/compass-widget_v1.0.1.zip) and follow runtime deployment instructions from [here](https://github.com/SoftwareAG/cumulocity-runtime-widget-loader).
+* This widget supports runtime deployment. Download the [Runtime Binary](https://github.com/SoftwareAG/cumulocity-compass-widget/releases/download/1.0.1/compass-widget_v1.0.1.zip) and use application builder to install your runtime widget.
 
 
 ## Quickstart
