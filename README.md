@@ -1,4 +1,4 @@
-﻿# Cumulocity IoT Compass widget[<img width="35" src="https://user-images.githubusercontent.com/67993842/97668428-f360cc80-1aa7-11eb-8801-da578bda4334.png"/>](https://github.com/SoftwareAG/cumulocity-compass-widget/releases/download/1.0.1/compass-widget_v1.0.1.zip)
+﻿# Cumulocity IoT Compass widget[<img width="35" src="https://user-images.githubusercontent.com/67993842/97668428-f360cc80-1aa7-11eb-8801-da578bda4334.png"/>](https://github.com/SoftwareAG/cumulocity-compass-widget/releases/download/v1.0.3/compass-widget-1.0.3.zip)
 
 ![Compasswidget](compass-widget.png)
 
@@ -10,7 +10,7 @@
 
 ### Runtime Widget Deployment?
 
-* This widget supports runtime deployment. Download the [Runtime Binary](https://github.com/SoftwareAG/cumulocity-compass-widget/releases/download/1.0.1/compass-widget_v1.0.1.zip) and use application builder to install your runtime widget.
+* This widget supports runtime deployment. Download the [Runtime Binary](https://github.com/SoftwareAG/cumulocity-compass-widget/releases/download/v1.0.3/compass-widget-1.0.3.zip) and use application builder to install your runtime widget.
 
 
 ## Quickstart
