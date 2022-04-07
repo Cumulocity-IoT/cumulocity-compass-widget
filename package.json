@@ -4,7 +4,7 @@
     "dist\\bundle-src\\custom-widget.js": "compass-widget-CustomWidget",
     "dist/bundle-src/custom-widget.js": "compass-widget-CustomWidget"
   },
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Displays an animated compass direction based on the measurement data provided (written by Software AG Global Presales)",
   "main": "index.js",
   "scripts": {
