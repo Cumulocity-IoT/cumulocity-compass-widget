@@ -1,6 +1,6 @@
 ﻿# Cumulocity IoT Compass widget[<img width="35" src="https://user-images.githubusercontent.com/67993842/97668428-f360cc80-1aa7-11eb-8801-da578bda4334.png"/>](https://github.com/SoftwareAG/cumulocity-compass-widget/releases/download/v1.0.3/compass-widget-1.0.3.zip)
 
-![Compasswidget](compass-widget.png)
+![compass-widget](https://user-images.githubusercontent.com/99970126/169800960-2ebf6492-a107-47ff-910e-1aaf635559de.PNG)
 
 ## Features
 **Realtime:** Realtime direction updates from defined measurement
