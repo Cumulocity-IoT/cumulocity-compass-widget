@@ -5,6 +5,7 @@ This widget displays an animated compass direction based on the measurement data
 ![compass-widget](https://user-images.githubusercontent.com/99970126/169800960-2ebf6492-a107-47ff-910e-1aaf635559de.PNG)
 
 ## Features
+
 **Realtime:** Realtime direction updates from defined measurement
 
 
